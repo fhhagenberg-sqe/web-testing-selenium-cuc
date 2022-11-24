@@ -9,8 +9,7 @@ In this exercise you learn how to sepcify a feature and example scenarios using 
 
 ### Prerequisites
 
-- [x] A current version of either Firefox or Chrome web browser
-- [x] Selenium WebDrive (dependencies managed by Maven)
+- [x] Selenium WebDriver (dependencies managed by Maven)
 - [x] Cucumber framework (dependencies managed by Maven)
 
 ### Instructions
@@ -19,14 +18,14 @@ In this exercise you learn how to sepcify a feature and example scenarios using 
 1. Remove the example tests part of the project
 1. Create a feature file [`src/test/resources/at/fhhagenberg/sqe/BibSearch.feature`](src/test/resources/at/fhhagenberg/sqe/BibSearch.feature) describing following scenario:
    1. Goto https://search-fho.obvsg.at/primo-explore/search?vid=FHO&search_scope=default_scope
-   1. Search for `software testing`
+   1. Search for "software testing"
    1. Assert the number of entries returned by the search
 1. Run `mvn test` to verify the feature file has been processed sucessfully.
 
 
 ## (2) Create test step definitions 
 
-The goal of this step is to create test step definitions, which map the scenario description to Java methods (see: https://cucumber.io/docs/gherkin/step-organization/?lang=java). 
+The goal of this step is to create test step definitions, which [map the scenario description to Java methods][Cucumber Gherkin]. 
 
 ### Prerequisites
 
@@ -37,7 +36,7 @@ The goal of this step is to create test step definitions, which map the scenario
 
 1. Create a test definition file [`src/test/java/at/fhhagenberg/sqe/StepDefinitions.java`](src/test/java/at/fhhagenberg/sqe/StepDefinitions.java)
 1. Add a public method for every `given`, `when`, and `then` step specified in the feature file
-1. Annotate the methods with `@Given`, `@When`, and `@Then` annotations including regular expressions matching the specified steps (see: https://cucumber.io/docs/cucumber/step-definitions/?lang=java)
+1. Annotate the methods with `@Given`, `@When`, and `@Then` annotations including [regular expressions matching the specified steps][Step Definitions] 
 1. Replace test data values with parameters to make the test step definitions more generic
 1. Leave the method implementation empty. Run `mvn test` to verify the textual descriptions in the feature file match the implemented test steps.
 
@@ -49,6 +48,7 @@ In this step you reuse the page objects developed in the previous exercise to ex
 ### Prerequisites
 
 - [x] Completion of the previous step of the exercise (2)
+- [x] A current version of either Firefox or Chrome web browser plus Selenium WebDriver
 - [x] Page objects developed in the previous exercise `Testing Web-Applications with Selenium`
 
 ### Instructions
@@ -69,5 +69,8 @@ When you're done...
 
 [GitHub creating releases]: https://help.github.com/articles/creating-releases/
 [GitHub linking to releases]: https://help.github.com/articles/linking-to-releases/
+[Selenium WebDriver]: https://www.selenium.dev/documentation/en/webdriver/
 [Cucumber]: https://cucumber.io/tools/cucumber-open/
 [Gherkin]: https://cucumber.io/docs/gherkin/
+[Cucumber Gherkin]: https://cucumber.io/docs/gherkin/step-organization/?lang=java
+[Step Definitions]: https://cucumber.io/docs/cucumber/step-definitions/?lang=java
