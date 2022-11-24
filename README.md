@@ -63,7 +63,7 @@ In this step you reuse the page objects developed in the previous exercise to ex
 When you're done...
 
 - [x] push your changes to your upstream repository on GitHub.
-- [x] on GitHub, [create a release][GitHub creating releases] with version `v3.0`.
+- [x] on GitHub, [create a release][GitHub creating releases] with version `v1.0`.
 - [x] upload the [link to your release][GitHub linking to releases] on the e-learning platform until the specified date and time before the next lecture.
 
 
